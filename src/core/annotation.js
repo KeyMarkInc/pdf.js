@@ -628,6 +628,9 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
     var fieldType = Util.getInheritableProperty(dict, 'FT');
     data.fieldType = isName(fieldType) ? fieldType.name : null;
     this.fieldResources = Util.getInheritableProperty(dict, 'DR') || Dict.empty;
+    if (fieldType.name=='Ch') {
+      data.options = dict.get('Opt');
+    }
 
     data.fieldFlags = Util.getInheritableProperty(dict, 'Ff');
     if (!isInt(data.fieldFlags) || data.fieldFlags < 0) {
