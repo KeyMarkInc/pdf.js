@@ -206,6 +206,7 @@ var Annotation = (function AnnotationClosure() {
     this.data.color = this.color;
     this.data.borderStyle = this.borderStyle;
     this.data.hasAppearance = !!this.appearance;
+    this.data.maxLength=dict.get("MaxLen")
   }
 
   Annotation.prototype = {
